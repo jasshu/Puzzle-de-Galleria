@@ -1,0 +1,97 @@
+<html>
+<head>
+<title> Puzzle de Galleria </title>
+<script src="script/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+PImage one;
+PImage two;
+PImage three;
+Pimage four;
+PImage five;
+
+int x;
+
+
+void setup()
+{
+
+	size( 500, 500 );
+	frameRate( 30 );
+	
+	one = loadImage("images/white wall.jpg");
+	two = loadImage("images/art frame 2.png");
+	three = loadImage("images/galaxy.jpg");
+	four = loadImage("images/k d3n.jpeg");
+	five = loadImage("images/rain.jpg");
+	six = loadImage("images/art frame.png");
+	seven = loadImage("images/K d3n art frame.png");
+	eight = loadImage("images/Description for kd3n.png");
+	nine = loadImage("images/Description for Galaxy.png");
+	ten = loadImage("images/Description for rain.png");
+
+}	
+	
+	
+void draw()
+{
+//art pictures
+	image(one,0,0,500,500);	
+	
+	image(two,150,100,150,150);
+
+	image(three,350,125,100,100);
+	
+	image(four,25,125,100,100);
+	
+	image(five,175,130,100,100);	
+
+	image(six,325,100,150,150);
+	
+	image(seven,20,100,125,150);
+	
+	
+
+// code for the description boxes
+if (mouseX > 25 && mouseX < 25+100 && mouseY > 275 && mouseY < 275+100 )
+	{
+		
+		image(eight,25,75);
+	}
+	else	
+	{		
+		image(eight,25,275,100,100);
+	}
+	if (mouseX > 175 && mouseX < 175+100 && mouseY > 275 && mouseY < 300+100
+		)
+	{
+		image(nine,175,75);
+	}
+	else	
+	{		
+		image(nine,175,275,100,100);
+	}
+	if (mouseX > 325 && mouseX < 175+100 && mouseY > 275 && mouseY < 300+100
+		)
+	{
+		image(ten,175,75);
+	}
+	else	
+	{		
+		image(ten,325,275,100,100);
+	}
+}
+
+
+
+
+
+
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>

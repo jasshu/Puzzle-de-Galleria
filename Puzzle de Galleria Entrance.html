@@ -1,0 +1,47 @@
+<html>
+<head>
+<title> Puzzle de Galleria Entrance </title>
+<script src="script/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+
+PImage door;
+
+void setup()
+{
+	
+	size( 2000, 2000 );
+	frameRate( 30 );
+	door = loadImage ("images/entrance.jpg");
+				
+}
+
+
+void draw()
+{
+
+background(255,255,255);
+text(mouseX,1000,300);
+text(mouseY,1000,420);
+
+	image(door,1,1);
+	
+		if (mousePressed == true && mouseButton == LEFT)
+			{
+					if (mouseX > 154 && mouseX < 154+30 && mouseY > 280 && mouseY < 280+30)
+					{
+						link("Puzzle de Galleria.html");
+					}
+			}
+											
+}
+
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>
+
