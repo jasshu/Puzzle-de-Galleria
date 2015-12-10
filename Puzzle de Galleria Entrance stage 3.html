@@ -1,0 +1,35 @@
+<html>
+<head>
+<title> Puzzle de Galleria Stage 3</title>
+<script src="script/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+
+PImage secretstairs;
+
+void setup()
+{
+	
+	size( 500, 500 );
+	background(0,0,0);
+	frameRate( 30 );
+	
+	secretstairs = loadImage ("secret staircase.jpg");
+				
+}
+
+
+void draw()
+{
+	image(secretstairs,1,1);										
+}
+
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>
+

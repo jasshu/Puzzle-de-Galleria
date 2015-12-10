@@ -11,6 +11,10 @@ Pimage four;
 PImage five;
 
 int x;
+int a;
+int b;
+// a = 10 starting value, no pop-up
+// a = 11 ending value, pop-up
 
 
 void setup()
@@ -27,15 +31,18 @@ void setup()
 	six = loadImage("images/art frame.png");
 	seven = loadImage("images/K d3n art frame.png");
 	eight = loadImage("images/Description for kd3n.png");
-	nine = loadImage("images/Description for Galaxy.png");
-	ten = loadImage("images/Description for rain.png");
+	ten = loadImage("images/Description for Galaxy.png");
+	nine = loadImage("images/Description for rain.png");
 
+	a=10;
+	b=10;
+	c=10;
 }	
 	
 	
 void draw()
 {
-//art pictures
+	//art pictures
 	image(one,0,0,500,500);	
 	
 	image(two,150,100,150,150);
@@ -52,33 +59,72 @@ void draw()
 	
 	
 
-// code for the description boxes
-if (mouseX > 25 && mouseX < 25+100 && mouseY > 275 && mouseY < 275+100 )
+	// code for the description boxes
+	if (mouseX > 25 && mouseX < 25+100 && mouseY > 275 && mouseY < 275+100 )
 	{
-		
-		image(eight,25,75);
+		a = 11;	
 	}
 	else	
 	{		
 		image(eight,25,275,100,100);
 	}
-	if (mouseX > 175 && mouseX < 175+100 && mouseY > 275 && mouseY < 300+100
-		)
+	
+	if (a == 11)
 	{
-		image(nine,175,75);
+		image(eight,25,75);
+	}	
+		
+	if (mouseX > 175 && mouseX < 175+100 && mouseY > 275 && mouseY < 300+100)
+	{
+		b = 11;
 	}
 	else	
 	{		
 		image(nine,175,275,100,100);
 	}
-	if (mouseX > 325 && mouseX < 175+100 && mouseY > 275 && mouseY < 300+100
-		)
+	if(b == 11)
 	{
-		image(ten,175,75);
+		image(nine,100,75);
+	}
+	
+		if (mousePressed == true && mouseButton == LEFT)
+		{
+			if (mouseX > 108 && mouseX < 108+24 && mouseY > 104 && mouseY < 104+9 && b == 11)
+
+			{
+				link("Puzzle de Galleria stage 4.html");
+			}
+		}		
+		
+	
+		
+	
+	if (mouseX > 325 && mouseX < 375+100 && mouseY > 275 && mouseY < 325+100)
+	{
+		c = 11;
 	}
 	else	
 	{		
 		image(ten,325,275,100,100);
+	}
+	if (c == 11)
+	{
+		image(ten,150,75)
+	}
+	
+	if (mousePressed == true && mouseButton == LEFT)
+	{
+		a=10;
+	}
+	
+	if (mousePressed == true && mouseButton == LEFT)
+	{
+		b=10;
+	}
+	
+	if (mousePressed == true && mouseButton == LEFT)
+	{
+		c=10;
 	}
 }
 

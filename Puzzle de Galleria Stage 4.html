@@ -1,0 +1,42 @@
+<html>
+<head>
+<title> Puzzle de Galleria Stage 4</title>
+<script src="script/processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+
+PImage floortiles;
+
+
+void setup()
+{
+	
+	size( 500, 500 );
+	background(0,0,0);
+	frameRate( 30 );
+	
+	floortiles = loadImage ("images/Puzzle Jesus.png");
+	
+				
+}
+
+
+void draw()
+{										
+
+//coding for the puzzle
+			
+		image(floortiles,1,1,500,500);
+
+
+}
+
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>
+
