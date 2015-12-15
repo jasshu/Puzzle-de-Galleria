@@ -7,6 +7,9 @@
 
 PImage secretstairs;
 
+
+int stairs;
+
 void setup()
 {
 	
@@ -15,13 +18,29 @@ void setup()
 	frameRate( 30 );
 	
 	secretstairs = loadImage ("images/secret staircase.jpg");
+	
 				
 }
 
 
 void draw()
-{
-	image(secretstairs,1,1);										
+{										
+
+//coding for the puzzle
+			
+	image(secretstairs,1,1,500,500);
+		
+		if (mousePressed == true && mouseButton == LEFT)
+			{
+					if (mouseX > 150 && mouseX < 150+200 && mouseY > 150 && mouseY < 150+300)
+					{
+						link("Puzzle de Galleria stage 4.html");
+					}
+			}
+//coding for riddle
+	text("The name of he who ",200,300);
+	text("gives us redemption",200,320);	
+	
 }
 
 </script>
